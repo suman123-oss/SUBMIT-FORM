@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 400px;
+    width: 500px;
+    box-shadow: 0 10px 10px 5px rgb(0,0,0,0.2);
+    margin: 100px auto;
+    border-radius: 10px;
+}
+.container h2{
+    text-align: center;
+    margin-top: 20px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;    
+}
+.box label{
+    margin-top: 10px;
+    
+}
+.box input{
+    margin-top: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+
+}
+
+.box .button{
+    margin-top: 15px;
+    height: 20px;
+    cursor: pointer;
+    
+}
+
+/* submit form style  */
+.container-2{
+    height: 400px;
+    width: 500px;
+    box-shadow: 0 10px 10px 5px rgb(0,0,0,0.2);
+    margin: 100px auto;
+    text-align: center;
+    padding: 20px;
+    padding-top: 100px;
+    border-radius: 10px;
+}
