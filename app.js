@@ -31,10 +31,14 @@ app.get("/",(req,res)=>{
 app.post("/sign_up", async(req,res)=>{
     try {
     //store request data:
-    const userData= new user(req.body)
-    
+    const {name,email,password,pno}= req.body
+    //check email exist:
+    const isexists=await user.findOne({email});
+    if(isexists){
+       return res.sendFile(path.join(__dirname, '/exists.html'));
+    }
     //save data in db:
-    await userData.save();
+    await userData.create({name,email,password,pno});
     console.log('data saved in database');
 
     res.sendFile(path.join(__dirname, "/submit.html"));
